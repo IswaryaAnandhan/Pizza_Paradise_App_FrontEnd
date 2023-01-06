@@ -2,19 +2,23 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deliverOrder, getAllOrders } from "../actions/orderActions";
 import Error from "../components/Error";
-import Filter from "../components/Filter";
 import Loading from "../components/Loading";
+
 export default function Orderslist() {
   const dispatch = useDispatch();
+
   const getordersstate = useSelector((state) => state.getAllOrdersReducer);
-  const { orders , error, loading  } = getordersstate;
+  const { orders, error, loading } = getordersstate;
+
   useEffect(() => {
     dispatch(getAllOrders());
   }, []);
+
   return (
     <div>
       {loading && <Loading />}
       {error && <Error error="Something went wrong" />}
+
       <table className="table table-striped table-bordered table-responsive-sm">
         <thead className="thead-dark">
           <tr>
@@ -41,7 +45,14 @@ export default function Orderslist() {
                     {order.isDelivered ? (
                       <h1>Delivered</h1>
                     ) : (
-                      <button className="btn" onClick={()=>{dispatch(deliverOrder(order._id))}}>Deliver</button>
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          dispatch(deliverOrder(order._id));
+                        }}
+                      >
+                        Deliver
+                      </button>
                     )}
                   </td>
                 </tr>

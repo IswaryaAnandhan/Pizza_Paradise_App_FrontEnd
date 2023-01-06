@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 import Addpizza from "./Addpizza";
 import Editpizza from "./Editpizza";
 import Orderslist from "./Orderslist";
@@ -28,29 +27,30 @@ export default function Adminscreen() {
 
           <ul className="adminfunctions">
             <li>
-              <Link to={'/admin/userslist'}>Users List</Link>
+              <Link to={"/admin/userslist"}>Users List</Link>
             </li>
             <li>
-            <Link to={'/admin/pizzaslist'}>Pizzas List</Link>
+              <Link to={"/admin/pizzaslist"}>Pizzas List</Link>
             </li>
             <li>
-            <Link to={'/admin/addpizza'}>Add Pizza</Link>
+              <Link to={"/admin/addpizza"}>Add Pizza</Link>
             </li>
             <li>
-            <Link to={'/admin/orderslist'}>Orders List</Link>
+              <Link to={"/admin/orderslist"}>Orders List</Link>
             </li>
-
-            
           </ul>
 
-
           <Switch>
-          <Route path="/admin" component={Userslist} exact/>
-              <Route path="/admin/userslist" component={Userslist} exact/>
-              <Route path="/admin/orderslist" component={Orderslist} exact/>
-              <Route path="/admin/pizzaslist" component={Pizzaslist} exact/>
-              <Route path="/admin/addpizza" component={Addpizza} exact/>
-              <Route path="/admin/editpizza/:pizzaid" component={Editpizza} exact/>
+            <Route path="/admin" component={Userslist} exact />
+            <Route path="/admin/userslist" component={Userslist} exact />
+            <Route path="/admin/orderslist" component={Orderslist} exact />
+            <Route path="/admin/pizzaslist" component={Pizzaslist} exact />
+            <Route path="/admin/addpizza" component={Addpizza} exact />
+            <Route
+              path="/admin/editpizza/:pizzaid"
+              component={Editpizza}
+              exact
+            />
           </Switch>
         </div>
       </div>

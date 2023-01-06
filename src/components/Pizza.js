@@ -3,18 +3,16 @@ import { Modal } from "react-bootstrap";
 import {useDispatch} from 'react-redux'
 import { addToCart } from "../actions/cartActions";
 
-
 export default function Pizza({ pizza }) {
- 
 
   const [quantity, setquantity] = useState(1);
   const [varient, setvarient] = useState("small");
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const dispatch = useDispatch()
+
   function addtocart()
   {
     dispatch(addToCart(pizza,quantity,varient))
@@ -50,7 +48,6 @@ export default function Pizza({ pizza }) {
             })}
           </select>
         </div>
-
         <div className="w-100 m-1">
           <p>Quantity</p>
           <select
@@ -66,7 +63,6 @@ export default function Pizza({ pizza }) {
           </select>
         </div>
       </div>
-
       <div className="flex-container">
         <div className="m-1 w-100">
           <h1 className="mt-1">
@@ -74,8 +70,7 @@ export default function Pizza({ pizza }) {
           </h1>
         </div>
         <div className="m-1 w-100">
-          <button className="btn" onClick={addtocart}>ADD TO CART</button>
-          
+          <button className="btn" onClick={addtocart}>ADD TO CART</button>        
         </div>
       </div>
 
@@ -83,12 +78,10 @@ export default function Pizza({ pizza }) {
         <Modal.Header closeButton>
           <Modal.Title>{pizza.name}</Modal.Title>
         </Modal.Header>
-
         <Modal.Body>
           <img src={pizza.image} className="img-fluid" style={{height:'400px'}}  alt=""/>
           <p>{pizza.description}</p>
         </Modal.Body>
-
         <Modal.Footer>
           <button className="btn" onClick={handleClose}>
             CLOSE
