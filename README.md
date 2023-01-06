@@ -1,3 +1,13 @@
+<h1>FrontEnd App Link:</h1>
+https://pizza-paradise-app.netlify.app/
+</hr>
+<h1>Admin Credential:</h1>
+EMAIL: aishwariyaanandhan@gmail.com
+PASSWORD: 789456123
+</hr>
+<h1>Navigation to admin:</h1>
+https://pizza-paradise-app.netlify.app/admin
+</hr>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
