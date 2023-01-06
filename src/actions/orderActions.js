@@ -27,7 +27,7 @@ export const getUserOrders=()=>async (dispatch,getState)=>{
   dispatch({type:'GET_USER_ORDERS_REQUEST'})
   
   try {
-      const response = await axios.post('/api/orders/getuserorders' , {userid : currentUser._id})
+      const response = await axios.post(`${config.api}/api/orders/getuserorders` , {userid : currentUser._id})
 
       
       console.log(response);
@@ -45,7 +45,7 @@ export const getAllOrders=()=>async (dispatch,getState)=>{
   dispatch({type:'GET_ALLORDERS_REQUEST'})
   
   try {
-      const response = await axios.get('/api/orders/getallorders')
+      const response = await axios.get(`${config.api}/api/orders/getallorders`)
 
       
       console.log(response);
@@ -62,10 +62,10 @@ export const deliverOrder=(orderid)=>async dispatch=>{
 
 
     try {
-      const response = await axios.post('/api/orders/deliverorder' , {orderid})
+      const response = await axios.post(`${config.api}/api/orders/deliverorder` , {orderid})
       console.log(response);
       alert('Order Delivered')
-      const orders = await axios.get('/api/orders/getallorders')
+      const orders = await axios.get(`${config.api}/api/orders/getallorders`)
       dispatch({type:'GET_ALLORDERS_SUCCESS' , payload:orders.data})
     } catch (error) {
       console.log(error);
