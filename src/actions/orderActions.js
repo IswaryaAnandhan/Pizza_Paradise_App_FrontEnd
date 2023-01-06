@@ -1,4 +1,5 @@
 import axios from "axios";
+import { config } from "../config";
 export const placeOrder=(token , subtotal)=>async (dispatch , getState)=>{
 
 
@@ -8,7 +9,7 @@ export const placeOrder=(token , subtotal)=>async (dispatch , getState)=>{
       
       try {
 
-         const response = await axios.post('/api/orders/placeorder' , {token , subtotal , currentUser , cartItems})
+         const response = await axios.post(`${config.api}/api/orders/placeorder` , {token , subtotal , currentUser , cartItems})
          dispatch({type:'PLACE_ORDER_SUCCESS'})
          console.log(response);
           
@@ -17,9 +18,6 @@ export const placeOrder=(token , subtotal)=>async (dispatch , getState)=>{
           console.log(error);
           
       }
-
-
-
 }
 
 
