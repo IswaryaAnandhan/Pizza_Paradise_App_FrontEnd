@@ -36,7 +36,7 @@ export default function Loginscreen() {
           <div>
             <input
               required
-              type="text"
+              type="email"
               placeholder="email"
               className="form-control"
               value={email}
@@ -45,7 +45,7 @@ export default function Loginscreen() {
               }}
             />
             <input
-              type="text"
+              type="password"
               placeholder="password"
               className="form-control"
               value={password}
