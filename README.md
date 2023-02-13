@@ -5,5 +5,5 @@
 <h3>EMAIL: aishwariyaanandhan@gmail.com </h3> 
 <h3>PASSWORD: 789456123 </h3>
 </hr>
-<h1>Navigation to admin: https://pizza-paradise-app.netlify.app/admin</h1>
+<h2>Navigation to admin: https://pizza-paradise-app.netlify.app/admin</h2>
 
