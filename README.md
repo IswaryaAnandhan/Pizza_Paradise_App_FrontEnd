@@ -1,9 +1,9 @@
-<h1>FrontEnd App Link:</h1>
-https://pizza-paradise-app.netlify.app/
+<h1>FrontEnd App Link: https://pizza-paradise-app.netlify.app/</h1>
+
 </hr>
 <h1>Admin Credential:</h1>
-<h3>EMAIL:</h3> aishwariyaanandhan@gmail.com
-<h3>PASSWORD:</h3> 789456123
+<h3>EMAIL: aishwariyaanandhan@gmail.com </h3> 
+<h3>PASSWORD: 789456123 </h3>
 </hr>
-<h1>Navigation to admin:</h1>
-https://pizza-paradise-app.netlify.app/admin
+<h1>Navigation to admin: https://pizza-paradise-app.netlify.app/admin</h1>
+
