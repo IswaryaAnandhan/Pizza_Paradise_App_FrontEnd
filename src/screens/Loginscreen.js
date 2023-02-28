@@ -18,9 +18,6 @@ export default function Loginscreen() {
   }, []);
 
   function login() {
-      if(!email&& !password){
-        alert("Please enter all the fields")
-      }
     const user = { email, password };
     dispatch(loginUser(user));
   }
